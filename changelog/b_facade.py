@@ -1,28 +1,38 @@
 import argparse
 import requests
 
+BASE_URL = "https://api.github.com"
+
 
 def generate_changelog(owner, repo, version):
-    BASE_URL = f"https://api.github.com/repos/{owner}/{repo}"
+    github = GitHubClient()
+    release_dt = github.get_release_date(owner, repo, version)
+    commit_messages = github.get_commit_messages(owner, repo, release_dt)
 
-    # get release date
-    resp = requests.get(f"{BASE_URL}/releases/tags/{version}")
-    if resp.status_code == 404:
-        raise ValueError("Version does not exist")
-    resp.raise_for_status()
-    release_dt = resp.json()["published_at"]
-
-    # get commit messages
-    params = {"sha": "master", "since": release_dt}
-    resp = requests.get(f"{BASE_URL}/commits", params=params)
-    resp.raise_for_status()
-    commit_messages = [item.get("commit", {}).get("message") for item in resp.json()]
-
-    # format
     changelog = ["CHANGELOG", ""]
-    for message in commit_messages[::-1]:
+    for message in commit_messages:
         changelog.append(f"- {message}")
     return changelog
+
+
+class GitHubClient:
+    def get_release_date(self, owner, repo, version):
+        url = f"{BASE_URL}/repos/{owner}/{repo}/releases/tags/{version}"
+        resp = requests.get(url)
+        if resp.status_code == 404:
+            raise ValueError("Version does not exist")
+        resp.raise_for_status()
+
+        return resp.json()["published_at"]
+
+    def get_commit_messages(self, owner, repo, release_dt):
+        url = f"{BASE_URL}/repos/{owner}/{repo}/commits"
+        params = {"sha": "master", "since": release_dt}
+        resp = requests.get(url, params=params)
+        resp.raise_for_status()
+
+        messages = [item.get("commit", {}).get("message") for item in resp.json()]
+        return messages[::-1]
 
 
 def parse_args():
