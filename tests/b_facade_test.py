@@ -1,4 +1,4 @@
-from unittest.mock import Mock, patch
+from unittest import mock
 import responses
 
 from changelog.b_facade import generate_changelog, GitHubClient
@@ -38,7 +38,7 @@ def test_github_client_get_commit_messages():
 class GitHubClientStub:
     def __init__(self, commit_messages=None):
         self.commit_messages = commit_messages
-        self.mock = Mock()
+        self.mock = mock.Mock()
 
     def get_release_date(self, *args, **kwargs):
         self.mock(*args, **kwargs)
@@ -48,7 +48,7 @@ class GitHubClientStub:
         return self.commit_messages
 
 
-@patch("changelog.b_facade.GitHubClient")
+@mock.patch("changelog.b_facade.GitHubClient")
 def test_generate_changelog(github_mock):
     commit_messages = ["first commit", "last commit"]
     github_mock.return_value = GitHubClientStub(commit_messages)
