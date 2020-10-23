@@ -12,7 +12,7 @@ Code and tests used to support blog post that demonstrates the advantages of usi
 
 - [Setting Up Development Environment](#setting-up-development-environment)
 - [Project Description](#project-description)
-- [Explaination of Code](#explaination-of-code)
+- [Explanation of Code](#explanation-of-code)
   - [Directly Integrate with Requests](#directly-integrate-with-requests)
   - [Implement Facade](#implement-facade)
   - [GraphQL API](#graphql-api)
@@ -38,7 +38,7 @@ This will take the form of a command line application that takes arguments: `pub
 - accepts a public repository and a previous release
 - generate a CHANGELOG consisting of commit messages
 
-## Explaination of Code
+## Explanation of Code
 
 ### Directly Integrate with Requests
 
