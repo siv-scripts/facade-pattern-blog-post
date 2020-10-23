@@ -7,15 +7,23 @@
 attrs==20.2.0             # via pytest
 certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
-idna==2.10                # via requests
+graphql-core==3.1.2       # via sgqlc
+idna==2.10                # via requests, yarl
 iniconfig==1.1.1          # via pytest
+multidict==5.0.0          # via yarl
 packaging==20.4           # via pytest
 pluggy==0.13.1            # via pytest
 py==1.9.0                 # via pytest
 pyparsing==2.4.7          # via packaging
-pytest==6.1.1             # via -r requirements.in
+pytest-vcr==1.0.2         # via -r requirements.in
+pytest==6.1.1             # via -r requirements.in, pytest-vcr
+pyyaml==5.3.1             # via vcrpy
 requests==2.24.0          # via -r requirements.in, responses
 responses==0.12.0         # via -r requirements.in
-six==1.15.0               # via packaging, responses
+sgqlc==11.0               # via -r requirements.in
+six==1.15.0               # via packaging, responses, vcrpy
 toml==0.10.1              # via pytest
 urllib3==1.25.11          # via requests, responses
+vcrpy==4.1.1              # via -r requirements.in, pytest-vcr
+wrapt==1.12.1             # via vcrpy
+yarl==1.6.2               # via vcrpy

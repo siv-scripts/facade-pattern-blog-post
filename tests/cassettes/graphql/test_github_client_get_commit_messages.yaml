@@ -1,0 +1,120 @@
+interactions:
+- request:
+    body: '{"query": "\n        query commitsSinceDt($owner: String!, $repo: String!,
+      $branch: String!, $since_dt: GitTimestamp) {\n            repository(owner:
+      $owner, name: $repo) {\n                object(expression: $branch) {\n                    ...
+      on Commit {\n                        history(since: $since_dt) {\n                            nodes
+      {\n                                messageHeadline\n                            }\n                        }\n                    }\n                }\n            }\n        }\n        ",
+      "variables": {"owner": "busy-beaver-dev", "repo": "busy-beaver", "branch": "master",
+      "since_dt": "2020-01-25T19:04:10Z"}, "operationName": null}'
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '679'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - python-requests/2.24.0
+      authorization:
+      - DUMMY
+    method: POST
+    uri: https://api.github.com/graphql
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA4VY23IbNxL9FZT2ZbdiqizqLj/RYhRpFa21krxx1dYWC5wBSUQzwAQXSowr/76n
+        GzMsWVYneZDsGNPoy+nTp/F1p9ZJ75x93Qmm89EmHzb0Nz//1VSJ/rSycfifztcm7pz99+tOa2LU
+        S3NpdN1YZ3bOdm5MWBpV2ypZ73SwJqocrVsqZ56U70zQsKKsU7ebtPJO7e+eqr//bX//6B87f7x7
+        y+DnDp4ZlfzrLw6lLy61qxuj7htdPSrddbPsrItJN42pVYVfc/oHszYu8dV7kqGrtgt+bVQ0KSGE
+        qJ58eFw0/ok+G59Kn11Ypxs4nKsVovcLdY471QXCvg0eydVNVAujUw6GDZ1Ihm59TOpzV/mWEnh+
+        cRv5/LF0/s605O7DkzHdho+KWe2P3pmEw8mEbxzaly64aHRcUUpVX/hIdcnRhA/8MyK9TnnXbFTu
+        Gq9r1QEIiLM4PpbsTuoaSa5wcLd3XKzJpEYyAEXGUbmvv6rxS8/+1DZ2jd6oeQAQUPKtr8jInpjs
+        odjbfP9IAInqoq/Uy9rviXm9znMTHDIa1XVjtMsd1WFPxOrnaNQ/7z/9S8H7JVUZLquKvkQG1Y1+
+        NAsLLJMNMXvTjdOtJWBv1NI4ajGjVqbpVDLPSf2ggsEBtJABnMgcV2NPTPHrDACyiQs7p8aOek59
+        9APAbNe62qjONxa/yOR7qcBDcr2bex1qCtQ8gwyscRVH917sJsIGilq6eZ5TAmnQB2Ihp/7JMfZK
+        qIvgW7W0adQs0MArgzCybdgFhGRb0BfbE7tq2sPJ5Ra1pX6mhEQVO1PZhUUuwGaVdwu7ZEMiNiZx
+        4yr1oOMjBfRbNtmwqVnuW3zGnBTVr36uFqCLtDKgTZSwBprJtAijSUOsVFoQtotrG+ar2GmkmJqD
+        TRxIJbofSK6jjND1r3HwgrPei2C8A8hC5qYHEYy25eYylCK+5I4nM8ewKRUQAXnlqmA0OqUFwYUN
+        O0ehoRq1Ac9s2kLl41OxiL9Y+IOO+i6m7MqkamwqhtvcJNuh57bJo3YZn4oR3ycdEhqPZ8T3F/T0
+        gQDqFxcktKTjrhmfinEP1LNo9JKD/smmyzxX97ltNeVhO0TGJ2I7XH56uLj6cqYuTdOqakW+Fjbw
+        HqiAx3DhRMwbUEFpixhldW6Q8C1yAdJIyCeQLnI/zMYnf4H+9D36Yx8NG3wD9uMTEfa9d3cGtKTY
+        dOkqCkkE+qew1M7+Di7zVSbkaJIqlIZj0fn7Jw02xTwBWHEYRGLTCgTjgN0RpAV+trpaQQJxOkWs
+        AMk+dJ4Z+qP3ieYYTYjxiQwCG0C/uAcfkZ/gn60e4Valr0XiPe+H0KdJhsPWJbMsdhjUxyLr0qR/
+        HP3sMZO4JkQtqtUOFw7NdixC7hwZwlBg3Ub6a+VbM4P2c6aeVT5DdsFqJHk2Y7uVb3JbKiAC8apG
+        pewCwoJ1RlppskJZqVKpxtwntbaaDEOkQDTB3ZqjlPFjl24EX7iahZzovAidlU8L+3yGgcpCqzbz
+        vMRNtRG063B+oW2j7EI5uBhzVUE1fwB6npVx67/4tNxRaE44OmUOZFlWpHZPExNmNs6AqOhq09i1
+        CRtK3mikiGdRtHLd7qZthCuLxD2/KlKFRc74WET9oEuDXqNP8RWdFgH/jfeRvOKB/Q4NvnzH+qjL
+        KHCZ3LlDhMEA5RgPZFbuhBIa25rB1AyWZmRpxpb+JNhv0wl/qO/hQd+GxI8lpiOxnc7L5dG2mCwj
+        86zp959cWWbKiwteJQWRHontd2Nr7D9PGhMPbK1JP2F+GPATMgWCBJ0w4LXK2XKHHIltNwVyN6/n
+        zh1WRIwRZOLzFerASxKxAnPKkdhtH5tsuoCmZUbp8hy6US10RWOz1wEf2N1fVqA7520p6ZGIq341
+        DEz/LDD2d/d231PU+7sHu3vkzqFYkxu/5rXq5yvMr6ICeH3QJHIrhBRI6WJGVtsBcSjmCcYgT8AE
+        2O0QIaygGxe+qYmsCLP4F2wFKjvwV11EYH+cnBQHz9A6/hHClTicWLB3iNi54hjFlJ+vtMOIuLim
+        HuEw4sqSY99pCSwiIHgKgC2KFFhY8iOy8qiuLdZTZA/W3sQJGRKZZ1gJCnvxUJm+HsiHYumHuRar
+        YLsCvEORUTiJVGusKnimQC+4uvMoUymNZl1O8oEBfChSSF+MCVQAIQNnD0R09XKayOHFTohZgzeA
+        Gvq4Z+YDEVH9ZbQXogNRR/R04DvFag9Sj5ZKnVKwWJeMApBjJlRCp5Rta3wglncwAWwpEwKt2LR8
+        oTrQm3S5WM8XUYK9eJf90a1t8G4QDAdiNd/cgljPEWFBupenl7LKXE3ZEbHa12aj/qPBNegyKpNs
+        Qiz0FE8K1GW0nxXEFHRoPAeQMGLS6BUGY2ZfJOMhodB9AS9pvUBlBU7fifi5gDq4vcPOjknBOgoc
+        Qtxo3cJTSaDk0dlAB7Q5tQBbk8H07+2kprWGqBusjX2+/5isYyFH0GjpoqG3LorcNPUsaPr8qsuH
+        h9t77Hx4etBNWmFjoFe2vtPYPRG4Pw2vFm9GJUKud2B47xkWCUpRaAtpEzf9bgLyBT1oC1Hsizik
+        t4ZuQ+8ko5iXmttNfh68saSlecgWVoTupWYrPKsmtyx05Oc90LmHm4ZGKM3TiB88C2k4W/obfy8X
+        tTzrfJnUuqMnPPjx5bzBk0pitLBE5VlEsaMuZRyxTarp//6g//4PvKzMDvkVAAA=
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+        X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+      Cache-Control:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      Content-Security-Policy:
+      - default-src 'none'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 23 Oct 2020 01:47:57 GMT
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Server:
+      - GitHub.com
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Accepted-OAuth-Scopes:
+      - repo
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-GitHub-Media-Type:
+      - github.v4
+      X-GitHub-Request-Id:
+      - C2C2:773F:36A913:9199E2:5F92364D
+      X-OAuth-Scopes:
+      - ''
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4996'
+      X-RateLimit-Reset:
+      - '1603421116'
+      X-RateLimit-Used:
+      - '4'
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1

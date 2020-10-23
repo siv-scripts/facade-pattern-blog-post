@@ -1,3 +1,6 @@
 pytest
+pytest-vcr
 requests
 responses
+sgqlc
+vcrpy
