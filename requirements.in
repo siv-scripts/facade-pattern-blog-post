@@ -1,6 +1,6 @@
-pytest
-pytest-vcr
-requests
-responses
-sgqlc
-vcrpy
+pytest==6.1.1
+pytest-vcr==1.0.2
+requests==2.24.0
+responses==0.12.0
+sgqlc==11.0
+vcrpy==4.1.1
