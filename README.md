@@ -1,6 +1,6 @@
-# Using the Facade Pattern to Add Layers to Your Software Architecture
+# Using the Facade Pattern to Wrap Third-Party Integrations
 
-Code and tests used to support blog post that demonstrates the advantages of using the Facade Pattern to wrap third-party APIs.
+Code and tests used to support blog post that demonstrates the advantages of using the Facade Pattern to wrap third-party integrations.
 
 [Link to Blog Post]()
 
@@ -105,9 +105,3 @@ I think it's better practice
 to use it for integration tests around wrapper classes.
 If underlying implementation changes,
 we only have to worry about how it affects each Client library.
-
-#### Need to reword
-
-- when we create an issolated integration, we can add integration tests that hit the API directly
-- something like VCR.py is useful when it is used to test the integration only
-  - VCR.py to test all your logic will work, but your tests become dependent on an external thing you don't control, versus an interface you can
