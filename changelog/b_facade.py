@@ -16,6 +16,8 @@ def generate_changelog(owner, repo, version):
 
 
 class GitHubClient:
+    """Facade around GitHub REST API"""
+
     def get_release_date(self, owner, repo, version):
         url = f"{BASE_URL}/repos/{owner}/{repo}/releases/tags/{version}"
         resp = requests.get(url)

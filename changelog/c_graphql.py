@@ -19,6 +19,8 @@ def generate_changelog(owner, repo, version):
 
 
 class GitHubClient:
+    """Facade around GitHub GraphQL API"""
+
     def __init__(self, oauth_token):
         headers = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
         self.endpoint = RequestsEndpoint("https://api.github.com/graphql", headers)
