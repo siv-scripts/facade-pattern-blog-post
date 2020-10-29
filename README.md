@@ -2,7 +2,7 @@
 
 Code and tests used to support blog post that demonstrates the advantages of using the Facade Pattern to wrap third-party integrations.
 
-[Link to Blog Post]()
+[Link to Blog Post](https://alysivji.github.io/clean-architecture-with-the-facade-pattern.html)
 
 ---
 
